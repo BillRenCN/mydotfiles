@@ -49,3 +49,4 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #add by bill for fix python install
 export PIP_REQUIRE_VIRTUALENV=false
 
+source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
