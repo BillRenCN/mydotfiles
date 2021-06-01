@@ -130,6 +130,9 @@ nnoremap <C-n> :set rnu!<CR>
 " save read-only files
 command -nargs=0 Sudow w !sudo tee % >/dev/null
 
+" to remap the escapr key
+inoremap jj <ESC>
+
 "---------------------
 " Plugin configuration
 "---------------------
@@ -152,6 +155,7 @@ endif
 nnoremap ; :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_show_hidden = 1
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " ag / ack.vim
 command -nargs=+ Gag Gcd | Ack! <args>
@@ -215,8 +219,12 @@ let g:markdown_folding = 1
 " fugitive
 set tags^=.git/tags;~
  
+"add by bill to plug in debug tools for terdebug
+packadd termdebug
 "add by bill about debug
 noremap <Leader>t :Termdebug<CR>
+"make termdebug split up into two
+let g:termdebug_wide=1
 
 "---------------------
 " Local customizations
@@ -227,17 +235,4 @@ let $LOCALFILE=expand("~/.vimrc_local")
 if filereadable($LOCALFILE)
     source $LOCALFILE
 endif
-
-
-
-
-"add by bill to plug in debug tools   for terdebug
-packadd termdebug
-
-"make termdebug split up into two
-let g:termdebug_wide=1
-" to remap the escapr key
-inoremap jj <ESC>
-
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 
