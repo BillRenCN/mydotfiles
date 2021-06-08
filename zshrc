@@ -50,3 +50,5 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PIP_REQUIRE_VIRTUALENV=false
 
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source ~/.zsh/plugins/z/z.sh
