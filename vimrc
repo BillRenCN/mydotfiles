@@ -218,6 +218,9 @@ let g:markdown_folding = 1
 
 " fugitive
 set tags^=.git/tags;~
+nmap <leader>gs :G<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gh :diffget //3<CR>
  
 "add by bill to plug in debug tools for terdebug
 packadd termdebug
