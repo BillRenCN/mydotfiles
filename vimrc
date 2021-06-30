@@ -226,6 +226,11 @@ noremap <Leader>t :Termdebug<CR>
 "make termdebug split up into two
 let g:termdebug_wide=1
 
+"utisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 "---------------------
 " Local customizations
 "---------------------
