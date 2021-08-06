@@ -133,6 +133,19 @@ command -nargs=0 Sudow w !sudo tee % >/dev/null
 " to remap the escapr key
 inoremap jj <ESC>
 
+"Undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ; ;<c-g>u
+inoremap ? ?<c-g>u
+inoremap [ [<c-g>u
+
+"Keep cursor centre
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
 "---------------------
 " Plugin configuration
 "---------------------
