@@ -52,3 +52,21 @@ export PIP_REQUIRE_VIRTUALENV=false
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.zsh/plugins/z/z.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/bill/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bill/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bill/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bill/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+#for xming display
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
