@@ -70,3 +70,6 @@ unset __conda_setup
 
 #for xming display
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+
+#support conda
+export PATH=/home/bill/anaconda3/bin:$PATH
