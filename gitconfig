@@ -92,7 +92,7 @@
 	default = upstream
 
 [credential]
-	helper = cache --timeout=3600
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 
 [grep]
 	lineNumber = true
